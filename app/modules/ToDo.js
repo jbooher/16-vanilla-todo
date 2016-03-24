@@ -6,6 +6,7 @@ class ToDo {
 
   render() {
     const ul = document.querySelector("#toDos");
+    const ulCompleted = document.querySelector("#completedList");
     const li = document.createElement("li");
 
     const label = document.createElement("label");
@@ -19,7 +20,9 @@ class ToDo {
 
     li.addEventListener("change", (e) => {
       li.classList.add("completed");
+      ulCompleted.appendChild(li);
       label.removeChild(input);
+      console.log(li);
     });
 
     ul.appendChild(li);
