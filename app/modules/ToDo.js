@@ -1,7 +1,8 @@
 class ToDo {
-  constructor(item) {
+  constructor(item, completed = false, todoList) {
     this.item = item;
-    this.completed = false;
+    this.completed = completed;
+    this.todoList = todoList;
   }
 
   render() {
@@ -18,14 +19,28 @@ class ToDo {
 
     li.appendChild(label);
 
-    li.addEventListener("change", (e) => {
-      li.classList.add("completed");
+    if (this.completed === true) {
       ulCompleted.appendChild(li);
-      label.removeChild(input);
-      console.log(li);
-    });
+      input.type = "submit";
+      input.value = "Archive";
+      input.addEventListener("click", (e) => {
+        ulCompleted.removeChild(li);
+      });
+    }
+    else {
+      li.addEventListener("change", (e) => {
+        this.completed = true;
+        this.todoList.save();
+        ulCompleted.appendChild(li);
+        input.type = "submit";
+        input.value = "Archive";
+        input.addEventListener("click", (e) => {
+          ulCompleted.removeChild(li);
+        });
+      });
 
-    ul.appendChild(li);
+      ul.appendChild(li);
+    }
   }
 }
 

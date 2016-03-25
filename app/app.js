@@ -1,13 +1,17 @@
 import ToDo from "./modules/ToDo";
+import ToDoList from "./modules/ToDoList";
 
 const toDoSubmit = document.querySelector("#toDoSubmit");
 const toDoInput = document.querySelector("#toDoInput");
 const toDoForm = document.querySelector("#toDoForm");
 
+const toDoList = new ToDoList();
+
 toDoForm.addEventListener("submit", (e) => {
-  const toDo = new ToDo(toDoInput.value);
   e.preventDefault();
-  toDo.render();
+  toDoList.createToDo(toDoInput.value);
   toDoInput.value = "";
   toDoInput.focus();
+  console.log(toDoList.toDos);
+
 });
