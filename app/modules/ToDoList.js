@@ -14,6 +14,10 @@ class ToDoList {
     toDo.render();
   }
 
+  removeToDo(todo) {
+    this.toDos.splice(todo, 1);
+  }
+
   save() {
     let todoData = this.toDos.map((todo) => {
       return { item: todo.item, completed: todo.completed };
@@ -24,7 +28,6 @@ class ToDoList {
 
   load() {
     let stringified = localStorage.getItem('todos');
-    // don't do this if its blank
     if (stringified === null) {
       return;
     }
