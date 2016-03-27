@@ -8,7 +8,7 @@ ul {
 body {
   font-family: "Merriweather", Helvetica;
   margin: 0;
-  background-color: #ccc; }
+  background-color: #eee; }
 
 .container {
   width: 100%; }
@@ -22,20 +22,19 @@ body {
   font-family: "Merriweather", Helvetica;
   padding: 0 10px;
   font-size: 2em;
-  width: 600px;
+  width: 585px;
   height: 50px;
   background-color: #fefefe;
-  border-radius: 5px;
-  margin-right: -11px; }
+  border-radius: 5px; }
 
 .toDoInput:focus {
   outline: none; }
 
 #toDoSubmit {
   font-family: "Merriweather", Helvetica;
-  margin-left: -5px;
   width: 100px;
   height: 55px;
+  margin-left: -6px;
   font-size: 2em;
   color: #fefefe;
   background-color: #0000cc;
@@ -56,19 +55,32 @@ body {
 
 .toDos li, .completedList li {
   margin: 10px 0;
-  border-bottom: 2px solid #333; }
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+  position: relative; }
 
 .toDos li:last-child, .completedList li:last-child {
-  border-bottom: none; }
+  border-bottom: none;
+  padding-bottom: 0; }
+
+.completedList li {
+  text-decoration: line-through; }
 
 .toDos input, .completedList input {
-  float: right; }
+  width: 60px;
+  height: 25px;
+  color: #fefefe;
+  background-color: #0000cc;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 4px 2px #8080ff;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-75%); }
 
 .toDos input {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border: 5px solid green; }
+  transform: translateY(-75%); }
 
 * {
   margin: 0;
@@ -80,7 +92,7 @@ ul {
 body {
   font-family: "Merriweather", Helvetica;
   margin: 0;
-  background-color: #ccc; }
+  background-color: #eee; }
 
 .container {
   width: 100%; }
@@ -94,20 +106,19 @@ body {
   font-family: "Merriweather", Helvetica;
   padding: 0 10px;
   font-size: 2em;
-  width: 600px;
+  width: 585px;
   height: 50px;
   background-color: #fefefe;
-  border-radius: 5px;
-  margin-right: -11px; }
+  border-radius: 5px; }
 
 .toDoInput:focus {
   outline: none; }
 
 #toDoSubmit {
   font-family: "Merriweather", Helvetica;
-  margin-left: -5px;
   width: 100px;
   height: 55px;
+  margin-left: -6px;
   font-size: 2em;
   color: #fefefe;
   background-color: #0000cc;
@@ -128,16 +139,29 @@ body {
 
 .toDos li, .completedList li {
   margin: 10px 0;
-  border-bottom: 2px solid #333; }
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+  position: relative; }
 
 .toDos li:last-child, .completedList li:last-child {
-  border-bottom: none; }
+  border-bottom: none;
+  padding-bottom: 0; }
+
+.completedList li {
+  text-decoration: line-through; }
 
 .toDos input, .completedList input {
-  float: right; }
+  width: 60px;
+  height: 25px;
+  color: #fefefe;
+  background-color: #0000cc;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 4px 2px #8080ff;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-75%); }
 
 .toDos input {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border: 5px solid green; }
+  transform: translateY(-75%); }

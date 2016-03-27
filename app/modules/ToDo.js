@@ -15,6 +15,7 @@ class ToDo {
 
     const input = document.createElement("input");
     input.type = "checkbox";
+    input.value = "Complete";
     label.appendChild(input);
 
     li.appendChild(label);
