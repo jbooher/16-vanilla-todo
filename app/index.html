@@ -3,20 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Vanilla Todo App - Assignment 16</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/styles/main.css">
   </head>
   <body>
-    <form id="toDoForm">
-      <input type="text" id="toDoInput" class="toDoInput">
-      <input type="submit" id="toDoSubmit" class="toDoSumbit" value="Add ToDo">
-    </form>
-    <div id="toDoList" class="toDoList">
-      <h2 class="toDoHeading">To-Do List</h2>
-      <ul id="toDos" class="toDos"></ul>
-    </div>
-    <div id="completedToDos" class="completedToDos">
-      <h2 id="completedHeading" class="completedHeading">Completed</h2>
-      <ul id="completedList" class="completedList"></ul>
+    <div class="container">
+      <div class="inputContainer">
+        <form id="toDoForm">
+          <input type="text" id="toDoInput" class="toDoInput">
+          <input type="submit" id="toDoSubmit" class="toDoSumbit" value="ADD">
+        </form>
+      </div>
+      <div class="outputContainer">
+        <div id="toDoList" class="toDoList">
+          <h2 class="toDoHeading">To-Do List</h2>
+          <ul id="toDos" class="toDos"></ul>
+        </div>
+        <div id="completedToDos" class="completedToDos">
+          <h2 id="completedHeading" class="completedHeading">Completed</h2>
+          <ul id="completedList" class="completedList"></ul>
+        </div>
+      </div>
     </div>
 
     <script src="/js/app.js" charset="utf-8"></script>
