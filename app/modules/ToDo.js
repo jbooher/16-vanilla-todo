@@ -26,6 +26,8 @@ class ToDo {
       input.value = "Archive";
       input.addEventListener("click", (e) => {
         ulCompleted.removeChild(li);
+        this.todoList.removeToDo(this);
+        this.todoList.save();
       });
     }
     else {
